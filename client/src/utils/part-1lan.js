@@ -1,6 +1,6 @@
 export const language = {
   companyName: [
-    "Addis Ababa Housing Development And Administration Beareu",
+    "Addis Ababa Housing Development And Administration Bureau",
     "አዲስ አበባ ቤቶች ልማት እና አስተዳደር ቢሮ",
     "",
     "",
@@ -8,7 +8,7 @@ export const language = {
     "",
   ],
   welcomeMessage: [
-    "Welcome To Addis Ababa Housing Development And Administration Beareu",
+    "Welcome To Addis Ababa Housing Development And Administration Bureau",
     "እንኳን ወደ አዲስ አበባ ቤቶች ልማት እና አስተዳደር ቢሮ የደንበኞች አገልጎሎት መስጫ መግቢያ ገጽ በደህና መጡ",
     "",
     "",
@@ -31,7 +31,7 @@ export const language = {
   register: ["Register", "ይመዝገቡ", "", "", ""],
   forMoreInfo: ["For more information", "ለበለጠ መረጃ"],
   bannerTitle: [
-    "Welcome To Addis Ababa Housing Development And Administration Beareu",
+    "Welcome To Addis Ababa Housing Development And Administration Bureau",
     "እንኳን ወደ አዲስ አበባ ቤቶች ልማት እና አስተዳደር ቢሮ በደህና መጡ!",
     "",
     "",
@@ -629,15 +629,17 @@ export const language = {
   ],
   tryAgain: ["Try different details", "በሌላ መረጃ ይሞክሩ", "", "", "", ""],
   confirmedRecord: ["Confirmed Record", "የተረጋገጠ መዝገብ", "", "", "", "", ""],
-  autoVerified: ["", "መረጃው በተሳካ ሁኔታ ተረጋግጧል"],
+  autoVerified: ["Saving Status", "የቆጣቢ መረጃ"],
   applicant: ["Applicant", "ተመዝጋቢ"],
-  bedroom: ["Bedroom", ""],
+  bedroom: ["Bedroom", "ባለ ስንት መኝታ"],
   applicantStatus: ["Applicant Status", "የተመዝጋቢ ሁኔታ"],
   jobStatus: ["Job Status", "የሥራ ሁኔታ"],
   disability: ["Disability", "አካል ጉዳት"],
-  verifyRecord: ["Verify Record", "ሌላ መረጃ ያረጋግጡ"],
+  verifyRecord: ["View Another Record", "ሌላ መረጃ ይመልከቱ"],
+  tryDiffrentDetails: ["Try Diffrent Details", "ሌላ መረጃ ይሞክሩ"],
   noMatch: ["No Record Found", "ምንም መረጃ አልተገኘም"],
   noMatchDesc: [
-    "We couldn't find a savings record matching this account number. Please check the digits and try again.",
+    "We couldn't find a savings record matching this account number. Please verify the digits you entered and try again.",
+    "ከዚህ የሂሳብ ቁጥር ጋር የሚዛመድ የቁጠባ መዝገብ ማግኘት አልተቻለም። እባክዎን ያስገቡትን ቁጥር አረጋግጠው እንደገና ይሞክሩ።",
   ],
 };

@@ -15,6 +15,8 @@ const Saving = () => {
   const [attempts, setAttempts] = useState(0);
   const [lockUntil, setLockUntil] = useState(localStorage.getItem("lockTime"));
   const [customerData, setCustomerData] = useState([]);
+  const [error,setError] = useState(false);
+  const [success,setSuccess] = useState(false);
   const [serverError, setServerError] = useState(false);
 
   useEffect(() => {
@@ -42,15 +44,21 @@ const Saving = () => {
           }
         )
         .then((res) => {
+          setSuccess(true)
+          setError(false);
           setIsLoading(false);
           setCustomerData(res?.data);
+          // setAttempts(5)
         })
         .catch((error) => {
+              setSuccess(false)
           setIsLoading(false);
+          setError(true)
           translationState?.lan === "En" &&
             toast.error(error?.response?.data?.Message_en);
           translationState?.lan === "Am" &&
             toast.error(error?.response?.data?.Message_am);
+            setCustomerData([])
           const newAttempts = attempts + 1;
           setAttempts(newAttempts);
 
@@ -100,6 +108,9 @@ const Saving = () => {
               <div className="w-full col-span-2">
                 <VerificationForm
                   key={searchKey}
+                  setError={setError}
+                  error={error}
+                  success={success}
                   lang={translationState?.lan}
                   onVerify={handleVerify}
                   isLoading={isLoading}
@@ -117,8 +128,10 @@ const Saving = () => {
                     </p>
                   </div>
                 ) : (
-                  customerData?.length > 0 && (
+                
                     <ResultStates
+                      error={error}
+                      setError={setError}
                       lang={translationState?.lan}
                       customerData={customerData}
                       onConfirm={(rec) =>
@@ -131,7 +144,7 @@ const Saving = () => {
                       }
                       onReset={resetSearch}
                     />
-                  )
+                  
                 )}
               </div>
             </div>

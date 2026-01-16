@@ -3,7 +3,14 @@ import { CreditCard, Lock, ShieldCheck } from "lucide-react";
 import { languageTranslate } from "../../utils/data";
 import { useSelector } from "react-redux";
 
-const VerificationForm = ({ onVerify, isLoading, attemptsLeft, lockUntil }) => {
+const VerificationForm = ({
+  error,
+  onVerify,
+  isLoading,
+  attemptsLeft,
+  lockUntil,
+  success
+}) => {
   const translationState = useSelector((state) => state.translation);
   const [bank, setBank] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
@@ -44,6 +51,8 @@ const VerificationForm = ({ onVerify, isLoading, attemptsLeft, lockUntil }) => {
 
   const getBorderColor = () => {
     if (isLocked) return "border-red-200";
+    if (error) return "border-red-600";
+    if(success) return "border-green-600"
 
     return "border-[#1B4075]/10 focus:ring-2 focus:ring-[#1B4075]";
   };
