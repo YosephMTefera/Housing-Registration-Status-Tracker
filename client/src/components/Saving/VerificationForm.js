@@ -9,7 +9,7 @@ const VerificationForm = ({
   isLoading,
   attemptsLeft,
   lockUntil,
-  success
+  success,
 }) => {
   const translationState = useSelector((state) => state.translation);
   const [bank, setBank] = useState("");
@@ -52,7 +52,7 @@ const VerificationForm = ({
   const getBorderColor = () => {
     if (isLocked) return "border-red-200";
     if (error) return "border-red-600";
-    if(success) return "border-green-600"
+    if (success) return "border-green-600";
 
     return "border-[#1B4075]/10 focus:ring-2 focus:ring-[#1B4075]";
   };
@@ -71,21 +71,33 @@ const VerificationForm = ({
 
                 {languageTranslate(translationState?.lan, "bankAccountNumber")}
               </label>
+              <div className="">
+                <a
+                  href="http://aahdabsaving.gov.et/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-[#1B4075] text-white text-sm  rounded-xl p-3 my-2"
+                >
+                  <span>
+                    {languageTranslate(translationState?.lan, "noSavingInfo")}
+                  </span>
+                </a>
+              </div>
             </div>
 
-            <div className="relative">
-              <div className="space-y-3">
+            <div className="relative mt-2">
+              <div className="space-y-3 mt-2">
                 <input
                   disabled={isLocked}
                   type="text"
                   value={bank}
                   onChange={handleInputChange}
-                  className={`w-full h-12 sm:h-14 px-4 bg-[#1B4075]/5 border rounded-xl transition-all outline-none text-base sm:text-lg font-black tracking-[0.1em] ${getBorderColor()} ${
+                  className={`w-full h-12 sm:h-14 px-4 mt-2 bg-[#1B4075]/5 border rounded-xl transition-all outline-none text-base sm:text-lg font-black tracking-[0.1em] ${getBorderColor()} ${
                     isLocked ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   placeholder={languageTranslate(
                     translationState?.lan,
-                    "enterAccountNumber"
+                    "enterAccountNumber",
                   )}
                 />
               </div>
@@ -128,8 +140,8 @@ const VerificationForm = ({
                 attemptsLeft === 0 || isLocked
                   ? "text-red-600 font-bold"
                   : attemptsLeft <= 2
-                  ? "text-red-600 font-bold"
-                  : "text-[#1B4075]/40"
+                    ? "text-red-600 font-bold"
+                    : "text-[#1B4075]/40"
               }`}
             >
               {attemptsLeft}{" "}

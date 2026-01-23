@@ -642,4 +642,5 @@ export const language = {
     "We couldn't find a savings record matching this account number. Please verify the digits you entered and try again.",
     "ከዚህ የሂሳብ ቁጥር ጋር የሚዛመድ የቁጠባ መዝገብ ማግኘት አልተቻለም። እባክዎን ያስገቡትን ቁጥር አረጋግጠው እንደገና ይሞክሩ።",
   ],
+    noSavingInfo:["Use this link for missing information","መረጃ ያላገኛችሁ በዚህ ሊንክ ተጠቀሙ"]
 };

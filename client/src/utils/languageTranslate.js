@@ -70,4 +70,5 @@ export const language = {
   ],
   tryAgain: ["Try different details", "እንደገና ይሞክሩ", "", "", "", ""],
   confirmedRecord: ["Confirm Record", "የተረጋገጡ መዝገቦች", "", "", "", "", ""],
+  noSavingInfo:["Use this link for missing information","መረጃ ያላገኛችሁ በዚህ ሊንክ ተጠቀሙ"]
 };

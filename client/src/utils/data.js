@@ -34,6 +34,7 @@ export const services = [
 
 export const languageTranslate = (lang, key) => {
   let translatedValue;
+
   switch (lang) {
     case "En":
       translatedValue = language[key][0];
