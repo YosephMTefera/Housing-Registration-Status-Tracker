@@ -635,6 +635,7 @@ export const language = {
   applicantStatus: ["Applicant Status", "የተመዝጋቢ ሁኔታ"],
   jobStatus: ["Job Status", "የሥራ ሁኔታ"],
   disability: ["Disability", "አካል ጉዳት"],
+  disabilityStatus: ["Disability Status", "የጤና አክል"],
   verifyRecord: ["View Another Record", "ሌላ መረጃ ይመልከቱ"],
   tryDiffrentDetails: ["Try Diffrent Details", "ሌላ መረጃ ይሞክሩ"],
   noMatch: ["No Record Found", "ምንም መረጃ አልተገኘም"],

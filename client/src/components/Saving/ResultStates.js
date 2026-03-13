@@ -249,6 +249,31 @@ const ResultStates = ({ error, setError, lang, onReset, customerData }) => {
                             {record.job_status}
                           </p>
                         </div>
+
+                          {/* Job Status */}
+                        <div>
+                          <p
+                            className={`${
+                              lang === "Am"
+                                ? "text-[14px] sm2:text-[16px]"
+                                : "text-[10px] sm2:text-[12px]"
+                            } font-black text-[#1B4075]/60 mb-1.5 uppercase tracking-tight`}
+                          >
+                            {languageTranslate(
+                              translateState?.lan,
+                              "disabilityStatus"
+                            )}
+                          </p>
+                          <p
+                            className={`${
+                              lang === "Am"
+                                ? "text-lg sm2:text-xl"
+                                : "text-base sm2:text-lg"
+                            } font-black text-[#1B4075] leading-tight`}
+                          >
+                            {record.disability}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   ))}
